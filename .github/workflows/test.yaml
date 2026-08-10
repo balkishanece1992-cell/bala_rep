@@ -20,17 +20,17 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init- krega
-        working-directory: ./Environment/dev
+        working-directory: ./
         run: terraform init
 
       - name: Terraform Validate - krega
-        working-directory: ./Environment/dev
+        working-directory: ./
         run: terraform validate
 
       - name: Terraform Plan
-        working-directory: ./Environment/dev
+        working-directory: ./
         run: terraform plan
 
       - name: Terraform Apply
-        working-directory: ./Environment/dev
+        working-directory: ./
         run: terraform apply -auto-approve
