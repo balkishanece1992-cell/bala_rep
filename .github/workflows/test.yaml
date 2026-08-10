@@ -1,10 +1,10 @@
-name: Deploy Azure VM
+name: Deploy RG
 
 on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  deploy_RG:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,11 +19,11 @@ jobs:
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
 
-      - name: Terraform Init
+      - name: Terraform Init- krega
         working-directory: ./Environment/dev
         run: terraform init
 
-      - name: Terraform Validate
+      - name: Terraform Validate - krega
         working-directory: ./Environment/dev
         run: terraform validate
 
