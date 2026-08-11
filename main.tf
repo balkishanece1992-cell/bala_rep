@@ -14,6 +14,6 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-    name = "bala_rg"
+    name = "lala_rg"
   location = "eastus"
 }
